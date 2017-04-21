@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:text="Welcome to LungCheck!"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/WelcomeWords"
+    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+    android:fontFamily="sans-serif"
+    android:textColor="@color/colorPrimary"
+    tools:layout_constraintTop_creator="1"
+    android:layout_marginTop="20dp"
+    tools:layout_constraintLeft_creator="1"
+    android:layout_marginStart="20dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true" />
+
+<TextView
+    android:text="Please log in with your email address."
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/InputRequirement"
+    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+    android:fontFamily="sans-serif"
+    android:textColor="@color/colorPrimary"
+    tools:layout_constraintTop_creator="1"
+    android:layout_marginTop="20dp"
+    tools:layout_constraintLeft_creator="1"
+    android:layout_marginStart="20dp"
+    android:textSize="18sp"
+    android:layout_below="@+id/WelcomeWords"
+    android:layout_alignParentStart="true" />
+
+<EditText
+    android:inputType="textEmailAddress"
+    android:ems="10"
+    android:id="@+id/LogInEmailAddress"
+    tools:layout_editor_absoluteY="119dp"
+    android:layout_width="275dp"
+    android:hint="  E-mail Address"
+    android:cursorVisible="true"
+    android:requiresFadingEdge="horizontal"
+    android:shadowColor="@android:color/darker_gray"
+    android:drawableStart="@android:drawable/sym_action_email"
+    android:singleLine="true"
+    android:layout_height="50dp"
+    android:layout_below="@+id/InputRequirement"
+    android:layout_alignStart="@+id/InputRequirement"
+    android:layout_marginTop="20dp" />
+
+<EditText
+    android:inputType="textEmailAddress"
+    android:ems="10"
+    android:id="@+id/LogInPassword"
+    tools:layout_editor_absoluteY="169dp"
+    android:layout_width="275dp"
+    android:layout_height="50dp"
+    android:hint="     Password"
+    android:cursorVisible="true"
+    android:requiresFadingEdge="horizontal"
+    android:shadowColor="@android:color/darker_gray"
+    android:drawableStart="@android:drawable/ic_secure"
+    android:singleLine="true"
+    tools:layout_editor_absoluteX="40dp"
+    android:layout_below="@+id/LogInEmailAddress"
+    android:layout_alignStart="@+id/LogInEmailAddress" />
+
+<Button
+    android:text="Log In"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="255dp"
+    tools:layout_editor_absoluteX="10dp"
+    android:id="@+id/LogInButton"
+    android:layout_width="350dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+    android:layout_below="@+id/LogInPassword"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="30dp" />
+
+<Button
+    android:text="Sign up  "
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="325dp"
+    tools:layout_editor_absoluteX="291dp"
+    android:id="@+id/SignUpButton"
+    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+    android:textSize="18sp"
+    android:layout_below="@+id/LogInButton"
+    android:layout_alignEnd="@+id/LogInButton"
+    android:layout_marginEnd="0dp"
+    android:layout_marginTop="20dp" />
+
+</RelativeLayout>
