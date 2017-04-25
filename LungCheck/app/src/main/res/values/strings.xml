@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">LungCheck</string>
+    <string name="title">please fill in the following details</string>
+    <string name="hint1">Name</string>
+    <string name="hint2">email</string>
+    <string name="hint3">password</string>
+    <string name="hint4">gender (M / F)</string>
+    <string name="hint5">Age</string>
+    <string name="hint6">Place</string>
+    <string name="checkbox">if you are a doctor</string>
+    <string name="button1">Save</string>
+    <string name="title2">Required additional information to register as Doctor</string>
+    <string name="hint7">Lisence no.</string>
+    <string name="hint8">Hospital name</string>
+
 </resources>

@@ -45,6 +45,14 @@ public class LogIn extends Activity {
                 }
             }
         });
+        //for the signup button
+        bnSignup.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(LogIn.this,SignUp.class);
+                startActivity(intent2);
+            }
+        });
     }
 
     private boolean loginPro() {
