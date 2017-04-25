@@ -22,7 +22,7 @@ public class SignUpDoctor extends AppCompatActivity {
         btnsaveInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignUpDoctor.this, InstructionsOne.class);
+                Intent intent=new Intent(SignUpDoctor.this, DoctorPage1.class);
                 startActivity(intent);
             }
         });
