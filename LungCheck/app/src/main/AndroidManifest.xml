@@ -22,13 +22,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".InstructionsOne" />
-
+        <activity android:name=".RecordingPage" />
         <activity android:name=".DetailedInstructionsOne" />
         <activity android:name=".LogIn" />
         <activity android:name=".RecordingPage1" />
+        <activity android:name=".RecordingPage2" />
+        <activity android:name=".RecordingPage3" />
+        <activity android:name=".RecordingPage4" />
+        <activity android:name=".RecordingPage5" />
+        <activity android:name=".RecordingPage6" />
+        <activity android:name=".RecordingPage7" />
+        <activity android:name=".RecordingPage8" />
+        <activity android:name=".DoctorPage1" />
         <activity android:name=".SignUp" />
-        <activity android:name=".SignUpDoctor" />
-        <activity android:name=".DoctorPage1"></activity>
+        <activity android:name=".SignUpDoctor"></activity>
     </application>
 
 </manifest>

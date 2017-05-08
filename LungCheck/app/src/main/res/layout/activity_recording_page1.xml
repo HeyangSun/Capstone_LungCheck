@@ -5,32 +5,9 @@
     android:layout_height="wrap_content"
     android:gravity="left"
     android:orientation="horizontal">
-    <ProgressBar
-        android:background="@drawable/gray"
-        android:id="@+id/progressBar"
-        android:layout_height="50dp"
-        android:layout_width="match_parent"
-        android:layout_marginStart="0dp"
-        android:layout_below="@+id/auscu1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:max="100"
-        android:progress="0"
-        android:progressDrawable="@drawable/progress_selector" style="?android:attr/progressBarStyleHorizontal"/>
-
-    <Button
-        android:background="@drawable/button_selector"
-        android:id="@+id/recording"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginStart="0dp"
-        android:layout_below="@+id/auscu1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
-        android:text="RECORDING"/>
 
     <TextView
-        android:text='Please put the stethoscope at the marked location for 10s'
+        android:text='Please put the stethoscope at location 0 for 10s'
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:id="@+id/Instructions"
@@ -44,18 +21,37 @@
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:srcCompat="@drawable/auscu1"
-        android:id="@+id/auscu1"
+        app:srcCompat="@drawable/auscu0"
+        android:id="@+id/auscu0"
         android:layout_marginTop="90dp" />
+
+    <ProgressBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ProgressBar"
+        android:layout_below="@+id/recording"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="START RECORDING"
+        android:layout_height="wrap_content"
+        android:id="@+id/recording"
+        android:layout_width="300dp"
+        android:layout_below="@+id/auscu0"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="NEXT LOCATION"
         android:layout_height="wrap_content"
         android:id="@+id/NextLocation"
-        android:layout_width="match_parent"
-        android:layout_marginStart="0dp"
-        android:layout_below="@+id/recording"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp" />
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ProgressBar" />
 
 </RelativeLayout>
