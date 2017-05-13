@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".InstructionsOne" />
-        <activity android:name=".RecordingPage" />
         <activity android:name=".DetailedInstructionsOne" />
         <activity android:name=".LogIn" />
         <activity android:name=".RecordingPage1" />
@@ -35,7 +34,8 @@
         <activity android:name=".RecordingPage8" />
         <activity android:name=".DoctorPage1" />
         <activity android:name=".SignUp" />
-        <activity android:name=".SignUpDoctor"></activity>
+        <activity android:name=".SignUpDoctor" />
+        <activity android:name=".patient_content_page"/>
     </application>
 
 </manifest>

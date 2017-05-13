@@ -8,11 +8,12 @@
     <string name="hint5">Age</string>
     <string name="hint6">Place</string>
     <string name="checkbox">If you are a doctor</string>
-    <string name="button1">Save</string>
+    <string name="button1">Next</string>
     <string name="title2">Required additional information to register as Doctor</string>
     <string name="hint7">License no.</string>
     <string name="hint8">Hospital name</string>
     <string name="title_activity_doctor_page1">DoctorPage1</string>
     <string name="title_doctorPage1">Welcome Doctor!</string>
+    <string name="title_activity_patient_previous__recordings">Patient_previous_Recordings</string>
 
 </resources>

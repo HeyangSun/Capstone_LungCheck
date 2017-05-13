@@ -34,7 +34,7 @@ public class SignUp extends AppCompatActivity {
                     startActivity(intent1);
                 }
                 else{
-                    Intent intent2 =new Intent(SignUp.this, InstructionsOne.class);
+                    Intent intent2 =new Intent(SignUp.this, patient_content_page.class);
                     startActivity(intent2);
                 }
 
