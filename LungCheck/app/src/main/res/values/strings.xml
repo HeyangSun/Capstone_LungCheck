@@ -14,6 +14,8 @@
     <string name="hint8">Hospital name</string>
     <string name="title_activity_doctor_page1">DoctorPage1</string>
     <string name="title_doctorPage1">Welcome Doctor!</string>
+    <string name="button2">Make a new Recording</string>
+    <string name="title_patientpage">Welcome!</string>
     <string name="title_activity_patient_previous__recordings">Patient_previous_Recordings</string>
 
 </resources>
