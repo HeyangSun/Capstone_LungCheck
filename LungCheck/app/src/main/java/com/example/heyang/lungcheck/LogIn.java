@@ -1,5 +1,12 @@
 package com.example.heyang.lungcheck;
 
+import org.json.JSONObject;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.example.heyang.lungcheck.util.DialogUtil;
+import com.example.heyang.lungcheck.util.HttpUtil;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +15,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.heyang.lungcheck.R;
-
-import com.example.heyang.lungcheck.util.DialogUtil;
 
 public class LogIn extends Activity {
     // 定义界面中两个文本框
@@ -29,10 +33,8 @@ public class LogIn extends Activity {
         bnLogin.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validate())
-                {
-                    if (loginPro())
-                    {
+                if (validate()) {
+                    if (loginPro()) {
                         Intent intent = new Intent(LogIn.this
                                 , InstructionsOne.class);
                         startActivity(intent);
@@ -49,7 +51,7 @@ public class LogIn extends Activity {
         bnSignup.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(LogIn.this,SignUp.class);
+                Intent intent2 = new Intent(LogIn.this, SignUp.class);
                 startActivity(intent2);
             }
         });
@@ -58,14 +60,14 @@ public class LogIn extends Activity {
     private boolean loginPro() {
         String username = etEmail.getText().toString();
         String pwd = etPass.getText().toString();
-
+        JSONObject jsonObj;
         try {
-            if(username.equals("hysunchn@gmail.com"))
-                if(pwd.equals("1111"))
-                    return true;
-
-        }
-        catch (Exception e) {
+            jsonObj = query(username, pwd);
+            // 如果userId 大于0
+            if (jsonObj.getInt("userId") > 0) {
+                return true;
+            }
+        } catch (Exception e) {
             DialogUtil.showDialog(this
                     , "The server is not working. Please try again later!", false);
             e.printStackTrace();
@@ -87,12 +89,11 @@ public class LogIn extends Activity {
         }
         return true;
     }
-}
 
-/*    // 定义发送请求的方法
+
+    // 定义发送请求的方法
     private JSONObject query(String username, String password)
-            throws Exception
-    {
+            throws Exception {
         // 使用Map封装请求参数
         Map<String, String> map = new HashMap<>();
         map.put("user", username);
@@ -102,4 +103,4 @@ public class LogIn extends Activity {
         // 发送请求
         return new JSONObject(HttpUtil.postRequest(url, map));
     }
-*/
+}

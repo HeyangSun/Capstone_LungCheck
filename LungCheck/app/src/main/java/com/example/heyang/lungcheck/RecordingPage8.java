@@ -71,6 +71,15 @@ public class RecordingPage8 extends Activity
                 }.start();
             }
         });
+        NextLocation.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecordingPage8.this
+                        , ResultDisplay.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     public int doWork()
